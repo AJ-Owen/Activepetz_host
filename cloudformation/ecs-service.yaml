@@ -1,0 +1,16 @@
+Resources:
+  ECSService:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster: !ImportValue ECSClusterName
+      ServiceName: activepetz-service
+      TaskDefinition: !ImportValue ECSTaskDefinitionArn
+      DesiredCount: 0
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          Subnets:
+            - subnet-08530629230b19f53
+            - subnet-08b33218da20b106b
+            - subnet-077a8dbab25e39011
+          AssignPublicIp: ENABLED
