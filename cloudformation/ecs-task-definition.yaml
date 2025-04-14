@@ -1,0 +1,28 @@
+Resources:
+  ECSTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: activepetz-task
+      Cpu: "256"
+      Memory: "512"
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !ImportValue ECSTaskExecutionRoleARN
+      ContainerDefinitions:
+        - Name: activepetz-container
+          Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/activepetz:latest"
+          PortMappings:
+            - ContainerPort: 80
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: /ecs/activepetz
+              awslogs-region: !Ref "AWS::Region"
+              awslogs-stream-prefix: ecs
+
+Outputs:
+  ECSTaskDefinitionArn:
+    Value: !Ref ECSTaskDefinition
+    Export:
+      Name: ECSTaskDefinitionArn
