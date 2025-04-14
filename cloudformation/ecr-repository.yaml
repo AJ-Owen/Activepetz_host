@@ -1,0 +1,11 @@
+Resources:
+  ECRRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: activepetz
+
+Outputs:
+  ECRRepositoryURI:
+    Value: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/activepetz"
+    Export:
+      Name: ECRRepositoryURI

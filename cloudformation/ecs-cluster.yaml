@@ -1,0 +1,16 @@
+Resources:
+  ECSCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: activepetz-cluster
+  ECSLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /ecs/activepetz
+      RetentionInDays: 180
+
+Outputs:
+  ECSClusterName:
+    Value: !Ref ECSCluster
+    Export:
+      Name: ECSClusterName
