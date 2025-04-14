@@ -1,0 +1,9 @@
+---
+
+services:
+  webapp:
+    image: activepetz
+    build: .
+    ports:
+      - "8080:80"
+    container_name: activepetz_container
