@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - staging
+      - containerised
 
 jobs:
   build-and-push:
@@ -23,11 +25,21 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get Git Short SHA
+        id: gitsha
+        run: echo "::set-output name=sha::$(git rev-parse --short HEAD)"
+
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/aj-owen/activepetz:latest .
+          docker build -t ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} .
+
+      - name: Retag 'latest'
+        run: |
+          docker tag ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} ghcr.io/aj-owen/activepetz:latest
 
       - name: Push Docker image
         run: |
+          docker push ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} && \
           docker push ghcr.io/aj-owen/activepetz:latest
+
 
