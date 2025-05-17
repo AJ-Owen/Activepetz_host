@@ -1,0 +1,9 @@
+services:
+  activepetz:
+    build: .
+    pull_policy: build
+    image: ghcr.io/aj-owen/activepetz:latest
+    container_name: activepetz
+    ports:
+      - 80:80
+
