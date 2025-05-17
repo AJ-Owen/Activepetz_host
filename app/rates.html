@@ -14,134 +14,123 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/rates.css">
 
-    <title>Pet Care Rates in Surrey - Active Petz</title>
+    <title>ActivePetz</title>
   </head>
 
   <body>
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light space-bottom--resize">
+    <!-- Landing Area-->
+    <div class="landing-sec sec bg-img">
+
+      <!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+        <div class="container-lg">
+          <a class="navbar-brand" disabled>
+            <img src="media/ap_logo.webp" alt="Activepetz Pet Care Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="rates.html">Rates</a>
+              </li>
+              <li class="nav-item my-auto">
+                <!-- <a class="nav-link" href="contact_us.html">Contact Us</a> -->
+                <button class="contact-btn my-1" type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Intro text -->
       <div class="container-lg">
-        <a class="navbar-brand" disabled>
-          <img src="media/activepetz_pet_care_logo.gif" alt="Activepetz Pet Care Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled green">Rates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact_us.html">Contact Us</a>
-            </li>
-          </ul>
+        <div id="landing-text" class="landing-text ml-0 animated">
+          <h1 class="mb-4">Our Rates</h1>
+          <p class="mb-4">
+            Our rates reflect the quality care and attention your pets deserve. Take a look below to find the pricing for our dog walking, daycare, boarding, and cat feeding services.
+          </p>
         </div>
       </div>
-    </nav>
 
-    <!-- Banner Image -->
-    <div class="space-bottom--l header-banner">
-      <img src="media/rates_banner.png" alt="Dog Pet Care Rates">
-      <h1 class="green animate__animated animate__fadeInDown animate__delay-1s">ActivePetz <span class="green">Rates</span></h1>
     </div>
 
-    <!-- Banner Title - for mobile devices -->
-    <div class="header-title space-bottom hidden">
-      <h1 class="centre space-bottom--none">ActivePetz Rates</h1>
-      <div class="hr-icon">
-        <hr class="hr--short">
-        <img class="img-with-hr" src="media/bone.png" alt="bone icon">
-        <hr class="hr--short">
-      </div>
-    </div>
 
-    <div class="container-md">
-      <h1 class="centre space-bottom--none">Surrey rates</h1>
-      <div class="hr-icon space-bottom--s">
-        <hr class="hr--short">
-        <img class="img-with-hr" src="media/bone.png" alt="bone icon">
-        <hr class="hr--short">
-      </div>
-    </div>
 
-    <div class="container-md space-bottom--l">
 
+    <!-- Tables -->
+    <div class="container-lg my-5">
+
+      <!-- Table Error Message -->
+      <p class="red hidden">Please rotate your phone or view on a larger device to view the <b>Dog Walking</b> table.</p>
+     
       <!-- Dog Walking -->
-      <table id="dog_walking" class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title">Dog Walking <br> and Puppy Socialisation</th>
-          <th class="table-cost">1 Dog</th>
-          <th class="table-cost">2 Dogs <br> Per Family</th>
-          <th class="table-cost">3 Dogs <br> Per Family</th>
-          <th class="table-cost">4 Dogs <br> Per Family</th>
-        </tr>
+      <table id="dog-table" class="table table-striped mb-4 animated">
+        <thead class="thead-dark">
+          <tr class="title-row">
+            <th class="table-title">Dog Services</th>
+            <th class="table-cost">1 Dog</th>
+            <th class="table-cost">2 Dogs</th>
+            <th class="table-cost">3 Dogs</th>
+            <th class="table-cost">4 Dogs</th>
+          </tr>
+        </thead>
+
         <tr>
-          <th>Rates Per Walk</th>
+          <th>Dog Walking and Puppy Socialisation</th>
           <td>£15</td>
           <td>£25</td>
           <td>£33</td>
           <td>POA</td>
         </tr>
-      </table>
 
-      <!-- Table Error Message -->
-      <p class="red hidden">Please rotate your phone or view on a larger device to view the <b>Dog Walking</b> table.</p>
-
-      <!-- Home Dog Boarding -->
-      <table class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title">Home Dog Boarding</th>
-          <th class="table-cost">1 Dog</th>
-          <th class="table-cost">2 Dogs</th>
-          <th class="table-cost">3 Dogs</th>
-          <th class="table-cost">4 Dogs</th>
-        </tr>
         <tr>
-          <th>Per Day</th>
-          <td>£45</td>
-          <td>£70</td>
-          <td>POA</td>
-          <td>POA</td>
-        </tr>
-      </table>
-
-
-      <!-- Home Dog Boarding -->
-      <table class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title"> <a href="https://www.dogdaysadventure.co.uk/" target="_blank">Doggy Day Care</a> </th>
-          <th class="table-cost">1 Dog</th>
-          <th class="table-cost">2 Dogs</th>
-          <th class="table-cost">3 Dogs</th>
-          <th class="table-cost">4 Dogs</th>
-        </tr>
-        <tr>
-          <th>Per Day</th>
+          <th>Dog Boarding Per Day</th>
           <td>£40</td>
-          <td>£62</td>
+          <td>£55</td>
           <td>POA</td>
           <td>POA</td>
+        </tr>
+
+        <tr>
+          <th>Dog Boarding Per Day</th>
+          <td>£40</td>
+          <td>£55</td>
+          <td>POA</td>
+          <td>POA</td>
+        </tr>
+
+        <tr>
+          <th><a href="https://www.dogdaysadventure.co.uk/" target="_blank">Doggy Day Care</a> Per Day</th>
+          <td>£36</td>
+          <td>£51</td>
+          <td>£60</td>
+          <td>£70</td>
         </tr>
       </table>
 
 
-      <!-- Cat Feeding -->
-      <table class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title"> Cat Feeding </th>
-          <th class="table-cost">1 Cat</th>
-          <th class="table-cost">2 Cats</th>
-          <th class="table-cost">3 Cats</th>
-          <th class="table-cost">4 Cats</th>
-        </tr>
+      <!-- Dog Walking -->
+      <table id="cat-table" class="table table-striped animated">
+        <thead class="thead-dark">
+          <tr class="title-row">
+            <th class="table-title">Cat Feeding</th>
+            <th class="table-cost">1 Cat</th>
+            <th class="table-cost">2 Cats</th>
+            <th class="table-cost">3 Cats</th>
+            <th class="table-cost">4 Cats</th>
+          </tr>
+        </thead>
+
         <tr>
           <th>One Home Visit Per Day</th>
           <td>£13</td>
@@ -157,126 +146,97 @@
           <td>POA</td>
         </tr>
       </table>
+
     </div>
 
-    <div class="container-md">
-      <h1 class="centre space-bottom--none">Ascot, Bracknell, Wokingham rates</h1>
-      <div class="hr-icon space-bottom--s">
-        <hr class="hr--short">
-        <img class="img-with-hr" src="media/bone.png" alt="bone icon">
-        <hr class="hr--short">
-      </div>
-    </div>
 
-    <div class="container-md space-bottom--l">
+    <div id="small-print" class="container-lg my-5 animated">
+      <div class="p-4 content-box">
+        <div class="row">
 
-      <!-- Table Error Message -->
-      <p class="red hidden">Please rotate your phone or view on a larger device to view the <b>Dog Walking</b> table.</p>
+          <div class="col-lg-4 img-sec my-auto">
+            <img src="media/small_print.webp" alt="ActivePetz Services Information">
+          </div>
 
-      <!-- Home Dog Boarding -->
-      <table class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title">Home Dog Boarding</th>
-          <th class="table-cost">1 Dog</th>
-          <th class="table-cost">2 Dogs</th>
-          <th class="table-cost">3 Dogs</th>
-          <th class="table-cost">4 Dogs</th>
-        </tr>
-        <tr>
-          <th>Per Day</th>
-          <td>£40</td>
-          <td>£65</td>
-          <td>POA</td>
-          <td>POA</td>
-        </tr>
-      </table>
+          <div class="col-lg-8 my-auto">
+            <h1 class="mb-2">The Small Print</h1>
 
-      <!-- Cat Feeding -->
-      <table class="space-bottom">
-        <tr class="title-row">
-          <th class="table-title"> Cat Feeding </th>
-          <th class="table-cost">1 Cat</th>
-          <th class="table-cost">2 Cats</th>
-          <th class="table-cost">3 Cats</th>
-          <th class="table-cost">4 Cats</th>
-        </tr>
-        <tr>
-          <th>One Home Visit Per Day</th>
-          <td>£10</td>
-          <td>£10</td>
-          <td>£11</td>
-          <td>POA</td>
-        </tr>
-        <tr>
-          <th>Two Home Visit Per Day</th>
-          <td>£15</td>
-          <td>£15</td>
-          <td>£16</td>
-          <td>POA</td>
-        </tr>
-      </table>
-    </div>
+            <p class="mb-0"><b>Please note:</b></p>
+            <ul>
+              <li>50% deposit payable on booking</li>
+              <li>The day of drop off and collection are counted as full days irrespective of the time of day.</li>
+              <li>Christmas Day, Boxing Day, New Years Day are double rates</li>
+            </ul>
+    
+            <p class="mb-0"><b>Cancellations:</b></p>
+            <ul>
+              <li>24 hours minimum notice for dog walking / daycare</li>
+              <li>2 weeks notice for boarding or a cancellation fee will apply</li>
+            </ul>
+          </div>
 
-    <div class="green-stripe">
-      <div class="container-md">
-        <h1 class="centre space-bottom--none">The Small Print</h1>
-        <div class="hr-icon space-bottom--s">
-          <hr class="hr--short">
-          <img class="img-with-hr" src="media/bone.png" alt="bone icon">
-          <hr class="hr--short">
         </div>
-        <p class="space-bottom--none"><b>Please note:</b></p>
-        <ul class="space-bottom">
-          <li>50% deposit payable on booking</li>
-          <li>The day of drop off and collection are counted as full days irrespective of the time of day.</li>
-          <li>Christmas Day, Boxing Day, New Years Day are double rates</li>
-        </ul>
-
-        <p class="space-bottom--none"><b>Cancellations:</b></p>
-        <ul>
-          <li>24 hours minimum notice for dog walking / daycare</li>
-          <li>2 weeks notice for boarding or a cancellation fee will apply</li>
-        </ul>
       </div>
+
     </div>
+
+
+
 
     <!-- Footer -->
     <div class="footer">
-      <div class="container-md">
+      <div class="container-lg">
         <div class="row">
-          <div class="col-lg-4 space-bottom--resize--lg mx-auto centre">
-            <b>Contact</b>
+          <div class="col-lg-10 mx-auto">
+            <div class="centre"><b>Contact</b></div>
             <hr>
-            Cindy Owen <br>
-            <a href="mailto:cindy@dogdaysadventure.co.uk">cindy@dogdaysadventure.co.uk</a> <br>
-            Tel: 07956 455 225 <br>
-            <hr>
-            Eileen Larkin <br>
-            <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
-            Tel: 07941 411 281 <br><br>
-            <hr>
-            Judy Baker <br>
-            <a href="mailto:mrsjudybaker@hotmail.com">mrsjudybaker@hotmail.com</a> <br>
-            Tel: 07957 591 721 <br><br>
+
+            <div class="row mb-2">
+              <div class="col-lg-4 mb-3">
+                <b>Cindy Owen</b> <br>
+                <a href="mailto:cindyowen@blueyonder.com">cindyowen@blueyonder.com</a> <br>
+                Tel: 07956 455 225
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Eileen Matthews</b> <br>
+                <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
+                Tel: 07941 411 281 
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Judy Baker</b> <br>
+                <a href="mrsjudybaker@hotmail.com">mrsjudybaker@hotmail.com</a> <br>
+                Tel: 07957 591 721
+              </div>
+
+            </div>
+            
           </div>
-          <div class="col-lg-4 mx-auto centre">
-            <b>Website Links</b>
+          <div class="col-lg-2 mx-auto">
+            <div class="centre"><b>Website Links</b></div>
             <hr>
-            <a href="index.html">About Us</a> <br>
+            <a href="#">About Us</a> <br>
             <a href="services.html">Services</a> <br>
-            <a href="#">Rates</a> <br>
-            <a href="contact.html">Contact Us</a> <br>
+            <a href="rates.html">Rates</a> <br>
+            <a href="contact_us.html">Contact Us</a> <br>
           </div>
 
         </div>
-        <p class="legal"> Copyright © Active Pets | License: 23/00389/ANBOR - Cindy Owen | License: 23/00322/ANBOR - Eileen Larkin</p>
+        <p class="legal"> Copyright © Active Pets | License: 201935346 - Cindy Owen</p>
       </div>
     </div>
+
+
 
     <!-- BOOTSTRAP DOWNLOADED -->
     <script src="js/bootstrap-4.5.2-dist/js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap-4.5.2-dist/js/popper.min.js"></script>
     <script src="js/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- Local JS -->
+    <script src="js/rates.js"></script>
+    <script src="js/global.js"></script>
 
   </body>
 </html>

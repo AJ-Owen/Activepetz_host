@@ -14,65 +14,73 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/services.css">
 
-    <title>Pet Care Services in Surrey - Active Petz</title>
+    <!-- Icons -->
+    <script src="js/kit.fontawesome.com_a587e37390.js"></script>
+
+    <title>ActivePetz</title>
   </head>
 
   <body>
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light space-bottom--resize">
+
+    <!-- Landing Area-->
+    <div class="landing-sec sec bg-img">
+
+      <!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+        <div class="container-lg">
+          <a class="navbar-brand" disabled>
+            <img src="media/ap_logo.webp" alt="Activepetz Pet Care Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rates.html">Rates</a>
+              </li>
+              <li class="nav-item my-auto">
+                <!-- <a class="nav-link" href="contact_us.html">Contact Us</a> -->
+                <button class="contact-btn my-1" type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Intro text -->
       <div class="container-lg">
-        <a class="navbar-brand" disabled>
-          <img src="media/activepetz_pet_care_logo.gif" alt="Activepetz Pet Care Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled green">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="rates.html">Rates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact_us.html">Contact Us</a>
-            </li>
-          </ul>
+        <div id="landing-text" class="landing-text ml-0 animated">
+          <h1 class="mb-4">Our Services</h1>
+          <p class="mb-4">
+            We offer a full range of pet care services to keep your furry friends happy, healthy, and loved while you're away. From dog walks and daycare to overnight boarding and cat feeding, we’re here to make life easier for you and more fun for them!
+          </p>
         </div>
       </div>
-    </nav>
 
-    <!-- Banner Image -->
-    <div class="space-bottom header-banner">
-      <img src="media/services_banner.png" alt="Dog Pet Care Services">
-      <h1 class="white animate__animated animate__fadeInDown animate__delay-1s">Active Petz Services</h1>
     </div>
 
-    <!-- Banner Title - for mobile devices -->
-    <div class="header-title space-bottom hidden">
-      <h1 class="centre space-bottom--none">Active Petz Services</h1>
-      <div class="hr-icon">
-        <hr class="hr--short">
-        <img class="img-with-hr" src="media/bone.png" alt="Pet Care Bone Icon">
-        <hr class="hr--short">
-      </div>
-    </div>
+
+
 
     <!-- Choices -->
-    <div class="container-lg space-bottom">
+    <div class="container-lg py-5">
 
-      <div id="service-list" class="row hidden">
+      <div class="row service-list">
 
-        <div class="col-md-5 mx-auto">
-          <a href="?service=dog_walking">
+        <div id="info-box-walk" class="col-md-5 mx-auto animated">
+          <a role="button" data-toggle="modal" data-target="#dogWalkModal">
             <div class="info-box">
               <div class="img-sec">
-                <img src="media/dog_walking_information.png" alt="Pet Care Dog Walking">
+                <img src="media/dog_walking.webp" alt="Pet Care Dog Walking">
               </div>
               <div class="title-sec">
                 Dog Walking
@@ -81,11 +89,11 @@
           </a>
         </div>
 
-        <div class="col-md-5 mx-auto">
-          <a href="?service=daycare">
+        <div id="info-box-daycare" class="col-md-5 mx-auto animated animate__delay-0p5s">
+          <a role="button" data-toggle="modal" data-target="#dogDaycareModal">
             <div class="info-box">
               <div class="img-sec">
-                <img src="media/dog_daycare_information.png" alt="Pet Care Dog Daycare">
+                <img src="media/dog_daycare.webp" alt="Pet Care Dog Daycare">
               </div>
               <div class="title-sec">
                 Doggy Day Care
@@ -94,11 +102,11 @@
           </a>
         </div>
 
-        <div class="col-md-5 mx-auto">
-          <a href="?service=boarding">
+        <div id="info-box-boarding" class="col-md-5 mx-auto animated">
+          <a role="button" data-toggle="modal" data-target="#dogBoardingModal">
             <div class="info-box">
               <div class="img-sec">
-                <img src="media/dog_boarding_information.png" alt="Pet Care Dog Boarding">
+                <img src="media/dog_boarding.webp" alt="Pet Care Dog Boarding">
               </div>
               <div class="title-sec">
                 Dog Boarding
@@ -107,11 +115,11 @@
           </a>
         </div>
 
-        <div class="col-md-5 mx-auto">
-          <a href="?service=feeding">
+        <div id="info-box-cat" class="col-md-5 mx-auto animated animate__delay-0p5s">
+          <a role="button" data-toggle="modal" data-target="#catFeedingModal">
             <div class="info-box">
               <div class="img-sec">
-                <img src="media/cat_feeding_information.png" alt="Pet Care Cat Feeding">
+                <img src="media/cat_feeding.webp" alt="Pet Care Cat Feeding">
               </div>
               <div class="title-sec">
                 Cat Feeding
@@ -121,129 +129,180 @@
         </div>
       </div>
 
-
-      <!-- Dog Walking Info -->
-      <div id="dog_walking" class="info-box details hidden">
-        <span class="title-with-icon space-bottom--s">
-          <img class="inline-icon" src="media/dog_walking_icon.png" alt="Dog Walking Icon">
-          <h1 class="centre">Dog Walking</h1>
-        </span>
-
-        <a class="close" href="services.html"> <img src="media/close-red.png" alt="Exit Button"> </a>
-        <p>
-          We will initially meet you and your dog to make sure we all like each other!
-          <br><br>
-          If everything goes well, we will take your dog out on a trial walk.  Thereafter we can discuss your individual needs.
-          <br><br>
-          We offer daily 1.5 hour walks in local parks.
-          <br><br>
-          Your dog is collected from your house and driven to the park and walked along side other dogs for full-speed fun!
-          <br><br>
-          Afterwards, the dogs are offered a drink of water, towel dried/washed and then chauffeured home.
-          <br><br>
-          We guarantee your dog will be run out and tired and will probably sleep for the rest of the afternoon!
-        </p>
-      </div>
+    </div>
 
 
-      <!-- Day Care Info -->
-      <div id="daycare" class="info-box details hidden">
-        <span class="title-with-icon space-bottom--s">
-          <img class="inline-icon" src="media/daycare_icon.png" alt="Dog Daycare Icon">
-          <h1 class="centre">Doggy Day Care</h1>
-        </span>
-        <a class="close" href="services.html"> <img src="media/close-red.png" alt="Exit Button"> </a>
-        <p>
-          We also offer a day care package when you are going to be out for too long to leave your dog home alone.
-          <br><br>
-          If just going out for a walk isn’t enough...
-          <br><br>
-          Located in a beautiful countryside area, the adventure centre has heated and secure accommodation with comfy beds for brief power naps. A secure 5 acre field for dogs to run, play and have the best fun and there is a lovely lake for swimming and cooling down.
-          <br><br>
-          <b>Your Dog is picked up between 8.30am and 9.30am</b> and taken to the Adventure Centre, where it will be walked and cared for by professional and experienced dog handlers.  Your dog will be dropped off exercised and content by 4pm to await your return home.
-          <br><br>
-          Find more information at: <a href="https://www.dogdaysadventure.co.uk/" target="_blank">Dog Days Adventure & Day Care Centre</a>
-        </p>
-      </div>
 
+    <!------- MODALS ------->
+    
+    <!-- DOG WALKING --> 
+    <div class="modal fade" id="dogWalkModal" tabindex="-1" role="dialog" aria-labelledby="dogWalkModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="dogWalkModalLabel" class="modal-title">
+              <i class="fa-solid fa-dog"></i>
+              Dog Walking
+            </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> 
+              We will initially meet you and your dog to make sure we all like each other! If everything goes well, we will take your dog out on a trial walk.  Thereafter we can discuss your individual needs.
+              <br><br>
+              We offer daily 1.5 hour walks in local parks. Your dog is collected from your house and driven to the park and walked along side other dogs for full-speed fun!
+              <br><br>
+              Afterwards, the dogs are offered a drink of water, towel dried/washed and then chauffeured home.
+              <br><br>
+              We guarantee your dog will be run out and tired and will probably sleep for the rest of the afternoon!
+            </p>
 
-      <!-- Boarding Info -->
-      <div id="boarding" class="info-box details hidden">
-        <span class="title-with-icon space-bottom--s">
-          <img class="inline-icon" src="media/boarding_icon.png" alt="Dog Boarding Icon">
-          <h1 class="centre">Dog Boarding</h1>
-        </span>
-        <a class="close" href="services.html"> <img src="media/close-red.png" alt="Exit Button"> </a>
-        <p>
-          Going on holiday? Let your dogs have a holiday too...
-          <br><br>
-          If you are interested in boarding your dog, please <a href="contact_us.html">Contact Us</a> to discuss details.
-        </p>
-      </div>
-
-
-      <!-- Boarding Info -->
-      <div id="feeding" class="info-box details hidden">
-        <span class="title-with-icon space-bottom--s">
-          <img class="inline-icon" src="media/cat_icon.png" alt="Cat Feeding Icon">
-          <h1 class="centre">Cat Feeding</h1>
-        </span>
-        <a class="close" href="services.html"> <img src="media/close-red.png" alt="Exit Button"> </a>
-        <p>
-          While you are away – let us look after you cat in your own home.
-          <br><br>
-          We will come in and give lots of TLC, clean out litter trays and while there – we can water house plants too.
-          <br><br>
-          Visits can be arranged for once or twice a day.
-        </p>
+            <div class="centre">
+              <button class="btn btn-primary mt-2" type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
+    <!-- DOG DAY CARE --> 
+    <div class="modal fade" id="dogDaycareModal" tabindex="-1" role="dialog" aria-labelledby="dogDaycareModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="dogDaycareModalLabel" class="modal-title">
+              <i class="fa-solid fa-paw"></i>
+              Doggy Day Care
+            </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> 
+              We also offer a day care package when you are going to be out for too long to leave your dog home alone.
+              <br><br>
+              If just going out for a walk isn’t enough...
+              <br><br>
+              Located in a beautiful countryside area, the adventure centre has heated and secure accommodation with comfy beds for brief power naps. A secure 5 acre field for dogs to run, play and have the best fun and there is a lovely lake for swimming and cooling down.
+              <br><br>
+              <b>Your Dog is picked up between 8.30am and 9.30am</b> and taken to the Adventure Centre, where it will be walked and cared for by professional and experienced dog handlers.  Your dog will be dropped off exercised and content by 4pm to await your return home.
+              <br><br>
+              Find more information at: <a href="https://www.dogdaysadventure.co.uk/" target="_blank">Dog Days Adventure & Day Care Centre</a>      
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- DOG BOARDING --> 
+    <div class="modal fade" id="dogBoardingModal" tabindex="-1" role="dialog" aria-labelledby="dogBoardingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="dogBoardingModalLabel" class="modal-title">
+              <i class="fa-solid fa-house"></i>
+              Dog Boarding
+            </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> 
+              Going on holiday? Let your dogs have a holiday too...
+              <br><br>
+              If you are interested in boarding your dog, please contact us to discuss details:
+            </p>
+
+            <div class="centre">
+              <button class="btn btn-primary mt-2" type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CAT FEED --> 
+    <div class="modal fade" id="catFeedingModal" tabindex="-1" role="dialog" aria-labelledby="catFeedingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="catFeedingModalLabel" class="modal-title">
+              <i class="fa-solid fa-cat"></i>
+              Cat Feeding
+            </h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> 
+              While you are away – let us look after you cat in your own home.
+              <br><br>
+              We will come in and give lots of TLC, clean out litter trays and while there – we can water house plants too.
+              <br><br>
+              Visits can be arranged for once or twice a day.
+            </p>
+
+            <div class="centre">
+              <button class="btn btn-primary mt-2" type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <!-- Footer -->
     <div class="footer">
-      <div class="container-md">
+      <div class="container-lg">
         <div class="row">
-          <div class="col-lg-4 space-bottom--resize--lg mx-auto centre">
-            <b>Contact</b>
+          <div class="col-lg-10 mx-auto">
+            <div class="centre"><b>Contact</b></div>
             <hr>
-            Cindy Owen <br>
-            <a href="mailto:cindy@dogdaysadventure.co.uk">cindy@dogdaysadventure.co.uk</a> <br>
-            Tel: 07956 455 225 <br>
-            <hr>
-            Eileen Larkin <br>
-            <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
-            Tel: 07941 411 281 <br><br>
-            <hr>
-            Judy Baker <br>
-            <a href="mailto:mrsjudybaker@hotmail.com">mrsjudybaker@hotmail.com</a> <br>
-            Tel: 07957 591 721 <br><br>
+
+            <div class="row mb-2">
+              <div class="col-lg-4 mb-3">
+                <b>Cindy Owen</b> <br>
+                <a href="mailto:cindyowen@blueyonder.com">cindyowen@blueyonder.com</a> <br>
+                Tel: 07956 455 225
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Eileen Matthews</b> <br>
+                <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
+                Tel: 07941 411 281 
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Judy Baker</b> <br>
+                <a href="mrsjudybaker@hotmail.com">mrsjudybaker@hotmail.com</a> <br>
+                Tel: 07957 591 721
+              </div>
+
+            </div>
+            
           </div>
-          <div class="col-lg-4 mx-auto centre">
-            <b>Website Links</b>
+          <div class="col-lg-2 mx-auto">
+            <div class="centre"><b>Website Links</b></div>
             <hr>
-            <a href="index.html">About Us</a> <br>
-            <a href="#">Services</a> <br>
+            <a href="#">About Us</a> <br>
+            <a href="services.html">Services</a> <br>
             <a href="rates.html">Rates</a> <br>
-            <a href="contact.html">Contact Us</a> <br>
+            <a href="contact_us.html">Contact Us</a> <br>
           </div>
 
         </div>
-        <p class="legal"> Copyright © Active Pets | License: 23/00389/ANBOR - Cindy Owen | License: 23/00322/ANBOR - Eileen Larkin</p>
+        <p class="legal"> Copyright © Active Pets | License: 201935346 - Cindy Owen</p>
       </div>
     </div>
-
-
-    <script>
-      const params = new URLSearchParams(window.location.search)
-      const service = params.get('service');
-
-      if (params.has('service')) {
-        document.getElementById(service).classList.remove("hidden");
-      } else {
-        document.getElementById('service-list').classList.remove("hidden");
-      }
-    </script>
 
 
     <!-- BOOTSTRAP DOWNLOADED -->
@@ -251,5 +310,9 @@
     <script src="js/bootstrap-4.5.2-dist/js/popper.min.js"></script>
     <script src="js/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 
+
+    <!-- Local JS -->
+    <script src="js/services.js"></script>
+    <script src="js/global.js"></script>
   </body>
 </html>

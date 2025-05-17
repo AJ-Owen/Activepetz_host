@@ -12,120 +12,182 @@
     <link rel="stylesheet" href="js/bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/rates.css">
+    <link rel="stylesheet" href="css/contact_us.css">
 
-    <title>Contact Pet Care Experts in Surrey - Active Petz</title>
+    <!-- Icons -->
+    <script src="js/kit.fontawesome.com_a587e37390.js"></script>
+
+    <title>ActivePetz</title>
   </head>
 
   <body>
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light space-bottom--resize">
+    
+    
+    <!-- Landing Area-->
+    <div class="landing-sec sec bg-img">
+
+      <!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+        <div class="container-lg">
+          <a class="navbar-brand" disabled>
+            <img src="media/ap_logo.webp" alt="Activepetz Pet Care Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rates.html">Rates</a>
+              </li>
+              <li class="nav-item my-auto">
+                <!-- <a class="nav-link" href="contact_us.html">Contact Us</a> -->
+                <button class="contact-btn my-1 disabled" disabled type="button" onclick="location.href='contact_us.html'">Contact Us</button>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Intro text -->
       <div class="container-lg">
-        <a class="navbar-brand" disabled>
-          <img src="media/activepetz_pet_care_logo.gif" alt="Activepetz Pet Care Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="rates.html">Rates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled green" href="#">Contact Us</a>
-            </li>
-          </ul>
+        <div id="landing-text" class="landing-text ml-0 animated">
+          <h1 class="mb-4">Contact Us</h1>
+          <p class="mb-4">
+            We’d love to hear from you! Whether you have a question, want to book a service, or just need more information, feel free to get in touch using the details below.          </p>
         </div>
       </div>
-    </nav>
 
-    <!-- Banner Image -->
-    <div class="space-bottom header-banner">
-      <img src="media/contact_banner.png" alt="Dog Pet Care Contact">
-      <h1 class="white animate__animated animate__fadeInDown animate__delay-1s">Contact Us</h1>
     </div>
 
-    <!-- Banner Title - for mobile devices -->
-    <div class="header-title space-bottom hidden">
-      <h1 class="centre space-bottom--none">Contact Us</h1>
-      <div class="hr-icon">
-        <hr class="hr--short">
-        <img class="img-with-hr" src="media/bone.png" alt="bone icon">
-        <hr class="hr--short">
-      </div>
-    </div>
+
+    
 
     <!-- Main Content -->
-    <div class="container-md space-bottom">
+    <div class="container-lg my-5">
       <div class="row">
-        <div class="col-md-5 mx-auto space-bottom--resize--lg">
-          <p>
-            <b>Cindy Owen</b> <br>
-            121 Raeburn Avenue <br>
-            Surbiton <br>
-            KT5 9DB
-            <br><br>
-            Mobile:  07956 455 225 <br>
-            E-mail: <a href="mailto:cindy@dogdaysadventure.co.uk">cindy@dogdaysadventure.co.uk</a>
-          </p>
-        </div>
-        <div class="col-md-5 mx-auto">
-          <p>
-            <b>Eileen Larkin</b> <br>
-            101 Gilders Road <br>
-            Chessington <br>
-            KT9 2AE
-            <br><br>
-            Mobile: 07941 411 281 <br>
-            E-mail: <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a>
 
-          </p>
+        <!-- Cindy -->
+        <div class="col-lg-5 mx-auto">
+          <div id="card-1" class="card card-ap animated animate__delay-0p5s">
+            <div class="card-header">
+              Cindy Owen
+            </div>
+            <div class="card-body">
+              <!-- Mob -->
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <a class="text-wrapper" href="tel:+447956455225">07956 455 225</a><br>
+              
+              <!-- Email -->
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <a class="text-wrapper" href="mailto:cindyowen@blueyonder.co.uk">cindyowen@blueyonder.co.uk</a><br>
+            
+              <!-- Address -->
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <a class="text-wrapper" href="https://maps.app.goo.gl/CLLGBFEkD1kZ2vP4A" target="_blank">
+                121 Raeburn Avenue <br>
+                Surbiton <br>
+                KT5 9DB
+              </a>
+            </div>
+          </div>
+
         </div>
+
+        <div class="col-lg-5 mx-auto">
+          <div id="card-2" class="card card-ap animated animate__delay-1s">
+            <div class="card-header">
+              Eileen Matthews
+            </div>
+            <div class="card-body">
+
+              <!-- Mob -->
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <a class="text-wrapper" href="tel:+447941411281">07941 411 281</a><br>
+              
+              <!-- Email -->
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <a class="text-wrapper" href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a><br>
+            
+              <!-- Address -->
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <a class="text-wrapper" href="https://maps.app.goo.gl/W7kiJAkXGp8u1vsV8" target="_blank">
+                101 Gilders Road <br>
+                Chessington <br>
+                KT9 2AE
+              </a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
+
+
 
 
     <!-- Footer -->
     <div class="footer">
-      <div class="container-md">
+      <div class="container-lg">
         <div class="row">
-          <div class="col-lg-4 space-bottom--resize--lg mx-auto centre">
-            <b>Contact</b>
+          <div class="col-lg-10 mx-auto">
+            <div class="centre"><b>Contact</b></div>
             <hr>
-            Cindy Owen <br>
-            <a href="mailto:cindy@dogdaysadventure.co.uk">cindy@dogdaysadventure.co.uk</a> <br>
-            Tel: 07956 455 225 <br>
-            <hr>
-            Eileen Larkin <br>
-            <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
-            Tel: 07941 411 281 <br>
+
+            <div class="row mb-2">
+              <div class="col-lg-4 mb-3">
+                <b>Cindy Owen</b> <br>
+                <a href="mailto:cindyowen@blueyonder.com">cindyowen@blueyonder.com</a> <br>
+                Tel: 07956 455 225
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Eileen Matthews</b> <br>
+                <a href="mailto:eileenmatthews@googlemail.com">eileenmatthews@googlemail.com</a> <br>
+                Tel: 07941 411 281 
+              </div>
+
+              <div class="col-lg-4 mb-3">
+                <b>Judy Baker</b> <br>
+                <a href="mrsjudybaker@hotmail.com">mrsjudybaker@hotmail.com</a> <br>
+                Tel: 07957 591 721
+              </div>
+
             </div>
-          <div class="col-lg-4 mx-auto centre">
-            <b>Website Links</b>
+            
+          </div>
+          <div class="col-lg-2 mx-auto">
+            <div class="centre"><b>Website Links</b></div>
             <hr>
-            <a href="index.html">About Us</a> <br>
+            <a href="#">About Us</a> <br>
             <a href="services.html">Services</a> <br>
             <a href="rates.html">Rates</a> <br>
-            <a href="#">Contact Us</a> <br>
+            <a href="contact_us.html">Contact Us</a> <br>
           </div>
 
         </div>
-        <p class="legal"> Copyright © Active Pets | License: 23/00389/ANBOR - Cindy Owen | License: 23/00322/ANBOR - Eileen Larkin</p>
+        <p class="legal"> Copyright © Active Pets | License: 201935346 - Cindy Owen</p>
       </div>
     </div>
+
 
     <!-- BOOTSTRAP DOWNLOADED -->
     <script src="js/bootstrap-4.5.2-dist/js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap-4.5.2-dist/js/popper.min.js"></script>
     <script src="js/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- Local JS -->
+    <script src="js/contact_us.js"></script>
+    <script src="js/global.js"></script>
 
   </body>
 </html>

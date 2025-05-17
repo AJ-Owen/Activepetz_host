@@ -1,4 +1,23 @@
-table {
+/**************** LANDING ****************/
+.landing-sec::before {
+  background-image: url("../media/rates_landing.webp");
+}
+
+
+
+
+/**************** TABLE ****************/
+.thead-primary th, .thead-primary td {
+  background-color: #007bff;
+  color: #fff;
+}
+.table-title {
+  width: 35%;
+}
+.table-cost {
+  width: 16.25%;
+}
+/* table {
   width: 100%;
   background-color: #fff;
   border: solid 3px #588157;
@@ -26,7 +45,7 @@ table td, table th {
 
 #dog_walking {
   display: table;
-}
+} */
 
 /* Large Resizing */
 @media (max-width: 992px) {
@@ -35,6 +54,9 @@ table td, table th {
 
 /* Small */
 @media (max-width: 767px){
+  .table {
+    font-size: 12px;
+  }
 }
 
 /* Phone */
