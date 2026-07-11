@@ -5,7 +5,8 @@ on:
     branches:
       - main
       - staging
-      - containerised
+    tags:
+      - '*'
 
 jobs:
   build-and-push:
@@ -27,19 +28,27 @@ jobs:
 
       - name: Get Git Short SHA
         id: gitsha
-        run: echo "::set-output name=sha::$(git rev-parse --short HEAD)"
+        run: echo "sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Build Docker image
         run: |
           docker build -t ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} .
 
-      - name: Retag 'latest'
+      - name: Tag and push (main)
+        if: github.ref_type == 'branch' && github.ref_name == 'main'
         run: |
           docker tag ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} ghcr.io/aj-owen/activepetz:latest
-
-      - name: Push Docker image
-        run: |
-          docker push ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} && \
+          docker push ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }}
           docker push ghcr.io/aj-owen/activepetz:latest
 
+      - name: Tag and push (staging)
+        if: github.ref_type == 'branch' && github.ref_name == 'staging'
+        run: |
+          docker tag ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} ghcr.io/aj-owen/activepetz:latest-staging
+          docker push ghcr.io/aj-owen/activepetz:latest-staging
 
+      - name: Tag and push (release)
+        if: github.ref_type == 'tag'
+        run: |
+          docker tag ghcr.io/aj-owen/activepetz:${{ steps.gitsha.outputs.sha }} ghcr.io/aj-owen/activepetz:${{ github.ref_name }}
+          docker push ghcr.io/aj-owen/activepetz:${{ github.ref_name }}
